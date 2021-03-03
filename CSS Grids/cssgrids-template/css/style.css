@@ -1,0 +1,59 @@
+body {
+	background: url(../img/12_col.gif) center top repeat-y;
+	background-size: 90%;
+}
+
+.container {
+	width: 1200px;
+	height: 900px;
+
+	margin: 0 auto;
+	display: grid;
+
+	column-gap: 15px;
+	row-gap: 15px;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	  "header header header header header header header header"
+	  "main1 main1 main2 main2 main2 main2 main3 main3"
+	  "content content content content content content sidebar sidebar"
+	  "footer footer footer footer footer footer footer footer";
+}
+
+.box-header {
+	grid-area: header;
+}
+
+.box1 {
+	grid-area: main1;
+}
+
+.box2 {
+	grid-area: main2;
+}
+
+.box3 {
+	grid-area: main3;
+}
+
+.box-content {
+	grid-area: content;
+}
+
+.box-sidebar {
+	grid-area: sidebar;
+}
+
+.footers {
+	grid-area: footer;
+	padding: 10px;
+	column-gap: 15px;
+	display: grid;
+    grid-template-columns: repeat(4, 1fr);
+	border: 1px solid black;
+}
+
+[class*="box"] {
+    border: 1px solid #333;
+}
